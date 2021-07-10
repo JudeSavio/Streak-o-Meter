@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Streak-o-Meter</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="S.ico"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body onload="set_page()">
+    <div class="streak-container">
+        <div class="streak-box">
+            <div class = "streak-number">
+                <p class="num">0</p>
+                <div class ="plus" onclick="plus()"><ion-icon name="add-circle-sharp"></ion-icon></div>
+                <div class = "minus" onclick="minus()"><ion-icon name="remove-circle-sharp"></ion-icon></div>
+            </div>
+            <div class = "streak-name">
+                <h1>Big 🦇Bat ⚡</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        function set_page(){
+            number = document.getElementsByClassName("num")[0].innerHTML;
+            var num_holder = localStorage.getItem('streak');
+            document.getElementsByClassName("num")[0].innerHTML = num_holder
+        }
+    </script>
+</body>
+</html>
