@@ -109,7 +109,6 @@
     align-items: center;
     color: white;
     text-transform: uppercase;
-    margin-top: 2%;
     font-size: 200%;
     width: 70%;
 }
@@ -124,3 +123,10 @@
     color: white;
 }
 
+.pencil:hover{
+    cursor: pointer;
+}
+
+.pencil:active{
+    transform:translateY(2px)
+}
