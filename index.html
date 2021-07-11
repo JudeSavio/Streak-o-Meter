@@ -31,6 +31,7 @@
             var num_holder = localStorage.getItem('streak');
             if(Number.isNaN(num_holder)){
                 num_holder = 0
+                console.log('NaN found')
             }
             console.log(num_holder)
             document.getElementsByClassName("num")[0].innerHTML = num_holder
