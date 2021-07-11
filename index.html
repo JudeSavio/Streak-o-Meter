@@ -11,7 +11,10 @@
     <script src="index.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
-<body onload="set_page()">
+<body>
+    <div class ="banner">
+        <img src="banner.png" alt="streak-meter-banner-logo">
+    </div>
     <div class="streak-container">
         <div class="streak-box">
             <div class = "streak-number">
@@ -20,20 +23,26 @@
                 <div class = "minus" onclick="minus()"><ion-icon name="remove-circle-sharp"></ion-icon></div>
             </div>
             <div class = "streak-name">
-                <h1>Big 🦇Bat ⚡</h1>
+                <h1>Big🦇Bat⚡</h1>
+                <ion-icon class = "pencil" onclick="pencil()" name="create"></ion-icon>
             </div>
         </div>
+        <div class="add-container"><ion-icon name="add-outline"></ion-icon></div>
     </div>
     <script>
         window.onload = function(){
             number = document.getElementsByClassName("num")[0].innerHTML;
+            number = Number(number)
             var num_holder = localStorage.getItem('streak');
-            if(num_holder == NaN){
-                num_holder = 0
-            }
+            console.log(Number.isNaN(num_holder))
             console.log(num_holder)
             document.getElementsByClassName("num")[0].innerHTML = num_holder
         }
     </script>
 </body>
 </html>
+
+<!-- 12-07-2021 -->
+<!-- Need to add color pallete on top left -->
+<!-- Need to add functionality for Grid and Add button -->
+<!-- Need to add functionality for edit button on card name -->

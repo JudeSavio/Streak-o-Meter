@@ -3,7 +3,7 @@
     padding: 0px;
     width: 100%;
     height: 100%;
-    font-family: 'open sans';
+    font-family: 'open sans',sans-serif;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -12,11 +12,30 @@
     user-select: none;
 }
 
+.banner{
+    width: 100%;
+    height: 9%;
+    background-image: linear-gradient(
+    to right,#e92efb,#ff2079,#440bd4,#04005e);
+    background-size: 300%;
+    background-image: -100%;
+    animation : backgroundShift 3s infinite alternate-reverse
+}
+
+.banner img{
+    width: 15%;
+    height: 60%;
+    margin-left: 3%;
+    margin-top: 1.0%;
+}
+
 .streak-container{
     width: 100%;
     height: 100%;
     background-color: yellow;
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(
@@ -39,8 +58,7 @@
     width: 300px;
     height: 300px;
     border-radius: 5px;
-    background-size: 300%;
-    background-image: -100%;
+    margin-top: 3%;
 }
 
 .streak-number{
@@ -109,5 +127,41 @@
     align-items: center;
     color: white;
     text-transform: uppercase;
+    font-size: 200%;
+    width: 70%;
 }
 
+.pencil{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 88%;
+    margin-top: -10%;
+    margin-bottom: 2%;
+    color: white;
+}
+
+.pencil:hover{
+    cursor: pointer;
+}
+
+.pencil:active{
+    transform:translateY(2px)
+}
+
+.add-container{
+    border-color: white;
+    border-radius: 25px;
+    border-style: solid;
+    color: white;
+    width: 6%;
+    height: 4%;
+    text-align: center;
+    font-size: 150%;
+    margin-top: 8%;
+    cursor: pointer;
+}
+
+.add-container:active{
+    transform: translateY(4px);
+}
