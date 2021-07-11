@@ -27,11 +27,11 @@
     <script>
         window.onload = function(){
             number = document.getElementsByClassName("num")[0].innerHTML;
-            console.log(number)
             var num_holder = localStorage.getItem('streak');
             if(num_holder == NaN){
                 num_holder = 0
             }
+            console.log(num_holder)
             document.getElementsByClassName("num")[0].innerHTML = num_holder
         }
     </script>
