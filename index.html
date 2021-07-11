@@ -25,9 +25,13 @@
         </div>
     </div>
     <script>
-        function set_page(){
+        window.onload = function(){
             number = document.getElementsByClassName("num")[0].innerHTML;
+            console.log(number)
             var num_holder = localStorage.getItem('streak');
+            if(num_holder == NaN){
+                num_holder = 0
+            }
             document.getElementsByClassName("num")[0].innerHTML = num_holder
         }
     </script>
