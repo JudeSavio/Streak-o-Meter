@@ -29,10 +29,7 @@
             number = document.getElementsByClassName("num")[0].innerHTML;
             number = Number(number)
             var num_holder = localStorage.getItem('streak');
-            if(num_holder.isNaN()){
-                num_holder = 0
-                console.log('NaN found')
-            }
+            console.log(Number.isNaN(num_holder))
             console.log(num_holder)
             document.getElementsByClassName("num")[0].innerHTML = num_holder
         }
