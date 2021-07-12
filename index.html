@@ -45,7 +45,7 @@
             console.log(number)
             var num_holder = localStorage.getItem('streak');
             console.log(number,num_holder)
-            if(Number.isNaN(num_holder) || Number(num_holder) < 0){
+            if(Number.isNaN(num_holder) || Number(num_holder) < 0 || num_holder == null){
                 num_holder = Number(0)
                 localStorage.setItem('streak', 0);
                 console.log('Caught the NaN and set to 0')
