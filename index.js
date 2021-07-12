@@ -91,5 +91,25 @@ function color_picker(className){
 }
 
 function pencil(){
-    pass
+    document.getElementsByClassName("overlay")[0].style = "display:flex"
+    document.getElementsByClassName("input-text")[0].focus();
+}
+
+function emoji(){
+    window.dispatchEvent(new KeyboardEvent('keydown', {
+        which: 90,
+        keyCode: 90,
+        shiftKey: false,
+        altKey: false,
+        ctrlKey: true,
+        metaKey: false,
+        key: "win"
+      }));
+}
+
+function change(){
+    card_content = document.getElementsByClassName("card-name")[0].innerHTML
+    input_content = document.getElementsByClassName("input-text")[0].value
+    document.getElementsByClassName("card-name")[0].innerHTML = input_content
+    document.getElementsByClassName("overlay")[0].style = "display:none"
 }
