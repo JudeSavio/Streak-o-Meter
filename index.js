@@ -4,17 +4,20 @@ function plus(){
     number = Number(number)
     if(number >= 100 && number<=999){
         document.getElementsByClassName("num")[0].innerHTML = number
+        localStorage.setItem('streak',number);
     }
     else if (number>=1000 && number<=9999){
         document.getElementsByClassName("num")[0].innerHTML = number
+        localStorage.setItem('streak',number);
     }
     else if(number >= 10000 && number <= 99999){
         document.getElementsByClassName("num")[0].innerHTML = number
+        localStorage.setItem('streak',number);
     }
     else{
         document.getElementsByClassName("num")[0].innerHTML = number
+        localStorage.setItem('streak',number);
     }
-    localStorage.setItem('streak',number);
     
 }
 
@@ -23,20 +26,22 @@ function minus(){
     number = parseInt(number) - 1;
     number = Number(number)
     if(number < 0){
-        document.getElementsByName("minus:active").style.transform = "translateY(5px)";
-        document.getElementsByName("minus:active").style.transform = "translateY(-5px)";
-        document.getElementsByName("minus:active").style.transform = "translateY(0px)";
+        document.getElementsByClassName("num")[0].innerHTML = 0
+        localStorage.setItem('streak',number);
     }
     else if(number >= 100 && number<=999){
         document.getElementsByClassName("num")[0].innerHTML = number
+        localStorage.setItem('streak',number);
     }
     else if(number >= 1000 && number<=9999){
         document.getElementsByClassName("num")[0].innerHTML = number
+        localStorage.setItem('streak',number);
     }
     else{
         document.getElementsByClassName("num")[0].innerHTML = number
+        localStorage.setItem('streak',number);
     }
-    localStorage.setItem('streak',number);
+    
 }
 
 function color_picker(className){
