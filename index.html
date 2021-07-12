@@ -35,6 +35,10 @@
             number = Number(number)
             var num_holder = localStorage.getItem('streak');
             console.log(Number.isNaN(num_holder))
+            if(Number.isNan(num_holder)){
+                num_holder = Number(0)
+                console.log('Caught the NaN and set to 0')
+            }
             console.log(num_holder)
             document.getElementsByClassName("num")[0].innerHTML = num_holder
         }
