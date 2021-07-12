@@ -58,7 +58,6 @@
     width: 300px;
     height: 300px;
     border-radius: 5px;
-    margin-top: 3%;
 }
 
 .streak-number{
@@ -70,6 +69,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    border:none;
 }
 
 .streak-name{
@@ -81,6 +81,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border:none;
 }
 
 .streak-number p{
@@ -98,6 +99,7 @@
     animation : backgroundShift 5s infinite alternate-reverse;
     background-clip: text;
     -webkit-background-clip: text;
+    border:none;
 }
 
 .add-minus-container{
@@ -107,6 +109,7 @@
     justify-content: center;
     align-items: center;
     background-color: #f6f6f6;
+    border:none;
 }
 
 .plus{
@@ -152,6 +155,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    border:none;
 }
 
 .pencil{

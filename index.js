@@ -84,3 +84,7 @@ function color_picker(className){
         "background-image: linear-gradient(to right,#bdbdfd,#bc7579,#535eeb,#00218a);background-size: 300%;background-image: -100%;animation : backgroundShift 5s infinite alternate-reverse";
     }
 }
+
+function pencil(){
+    pass
+}
