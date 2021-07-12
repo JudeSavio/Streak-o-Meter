@@ -14,17 +14,26 @@
 <body>
     <div class ="banner">
         <img src="banner.png" alt="streak-meter-banner-logo">
+        <div class = "color_container">
+            <div class="color_pallete_one" onclick="color_picker(this.getAttribute('class'));"></div>
+            <div class="color_pallete_two" onclick="color_picker(this.getAttribute('class'))"></div>
+            <div class="color_pallete_three" onclick="color_picker(this.getAttribute('class'))"></div>
+            <div class="color_pallete_four" onclick="color_picker(this.getAttribute('class'))"></div>
+            <div class="color_pallete_five" onclick="color_picker(this.getAttribute('class'))"></div>
+        </div>
     </div>
     <div class="streak-container">
         <div class="streak-box">
             <div class = "streak-number">
                 <p class="num">0</p>
+            </div>
+            <div class="add-minus-container">
                 <div class ="plus" onclick="plus()"><ion-icon name="add-circle-sharp"></ion-icon></div>
                 <div class = "minus" onclick="minus()"><ion-icon name="remove-circle-sharp"></ion-icon></div>
             </div>
+            <div class="pencil_box"><ion-icon class = "pencil" onclick="pencil()" name="create"></ion-icon></div>
             <div class = "streak-name">
                 <h1>Big🦇Bat⚡</h1>
-                <ion-icon class = "pencil" onclick="pencil()" name="create"></ion-icon>
             </div>
         </div>
         <div class="add-container"><ion-icon name="add-outline"></ion-icon></div>
@@ -33,9 +42,17 @@
         window.onload = function(){
             number = document.getElementsByClassName("num")[0].innerHTML;
             number = Number(number)
+            console.log(number)
             var num_holder = localStorage.getItem('streak');
-            console.log(Number.isNaN(num_holder))
+            console.log(number,num_holder)
+            if(Number.isNaN(num_holder) || Number(num_holder) < 0){
+                num_holder = Number(0)
+                localStorage.setItem('streak', 0);
+                console.log('Caught the NaN and set to 0')
+                console.log('Working')
+            }
             console.log(num_holder)
+            localStorage.setItem('streak', num_holder);
             document.getElementsByClassName("num")[0].innerHTML = num_holder
         }
     </script>
@@ -45,4 +62,3 @@
 <!-- 12-07-2021 -->
 <!-- Need to add color pallete on top left -->
 <!-- Need to add functionality for Grid and Add button -->
-<!-- Need to add functionality for edit button on card name -->
