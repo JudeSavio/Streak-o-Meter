@@ -19,7 +19,7 @@
     to right,#e92efb,#ff2079,#440bd4,#04005e);
     background-size: 300%;
     background-image: -100%;
-    animation : backgroundShift 3s infinite alternate-reverse
+    animation : backgroundShift 5s infinite alternate-reverse
 }
 
 .banner img{
@@ -42,7 +42,7 @@
     to right,#e92efb,#ff2079,#440bd4,#04005e);
     background-size: 300%;
     background-image: -100%;
-    animation : backgroundShift 3s infinite alternate-reverse
+    animation : backgroundShift 5s infinite alternate-reverse
 }
 
 @keyframes backgroundShift{
@@ -200,7 +200,7 @@
     width: 9%;
     height: 50%;
     background-image: linear-gradient(
-    to right,#fcf340,#7fff00,#fb33db,#0310ea);
+    to right,#ddd429,#63c007,#fb33db,#0310ea);
     border-radius: 100%;
     margin-left: 3%;
     margin-right: 3%;
@@ -216,7 +216,7 @@
     width: 9%;
     height: 50%;
     background-image: linear-gradient(
-    to right,#fef900,#03dddc,#ff822e,#f21a1d);
+    to right,#b9b605,#0496f7,#ff822e,#f21a1d);
     border-radius: 100%;
     margin-left: 3%;
     margin-right: 3%;
@@ -232,7 +232,7 @@
     width: 9%;
     height: 50%;
     background-image: linear-gradient(
-    to right,#ffe3f1,#fe1c80,#ff5f01,#ce0000);
+    to right,#e300fc,#ce0f65,#ff5f01,#ce0000);
     border-radius: 100%;
     margin-left: 3%;
     margin-right: 3%;
