@@ -48,3 +48,39 @@ function minus(){
     }
     localStorage.setItem('streak',number);
 }
+
+function color_picker(className){
+    console.log(className)
+    if(className=='color_pallete_one')
+    {
+        document.getElementsByClassName("streak-container")[0].style=
+        "background-image: linear-gradient(to right,#e92efb,#ff2079,#440bd4,#04005e);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+        document.getElementsByClassName("banner")[0].style=
+        "background-image: linear-gradient(to right,#e92efb,#ff2079,#440bd4,#04005e);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+    }
+    else if(className=='color_pallete_two'){
+        console.log('two working')
+        document.getElementsByClassName("streak-container")[0].style=
+        "background-image: linear-gradient(to right,#fcf340,#7fff00,#fb33db,#0310ea);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+        document.getElementsByClassName("banner")[0].style=
+        "background-image: linear-gradient(to right,#fcf340,#7fff00,#fb33db,#0310ea);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+    }
+    else if(className=='color_pallete_three'){
+        document.getElementsByClassName("streak-container")[0].style=
+        "background-image: linear-gradient(to right,#fef900,#03dddc,#ff822e,#f21a1d);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+        document.getElementsByClassName("banner")[0].style=
+        "background-image: linear-gradient(to right,#fef900,#03dddc,#ff822e,#f21a1d);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+    }
+    else if (className=='color_pallete_four'){
+        document.getElementsByClassName("streak-container")[0].style=
+        "background-image: linear-gradient(to right,#ffe3f1,#fe1c80,#ff5f01,#ce0000);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+        document.getElementsByClassName("banner")[0].style=
+        "background-image: linear-gradient(to right,#ffe3f1,#fe1c80,#ff5f01,#ce0000);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+    }
+    else if (className=='color_pallete_five'){
+        document.getElementsByClassName("streak-container")[0].style=
+        "background-image: linear-gradient(to right,#bdbdfd,#bc7579,#535eeb,#00218a);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+        document.getElementsByClassName("banner")[0].style=
+        "background-image: linear-gradient(to right,#bdbdfd,#bc7579,#535eeb,#00218a);background-size: 300%;background-image: -100%;animation : backgroundShift 3s infinite alternate-reverse";
+    }
+}
