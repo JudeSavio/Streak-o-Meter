@@ -12,6 +12,13 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+    <div class="overlay">
+        <div class="streak-name-edit">
+            <input class="input-text" type="text">
+            <ion-icon class = "emoji"  onclick="emoji()" name="happy"></ion-icon>
+            <div class="add-button" onclick="change()">Change</div>
+        </div>
+    </div>
     <div class ="banner">
         <img src="banner.png" alt="streak-meter-banner-logo">
         <div class = "color_container">
@@ -31,9 +38,9 @@
                 <div class ="plus" onclick="plus()"><ion-icon name="add-circle-sharp"></ion-icon></div>
                 <div class = "minus" onclick="minus()"><ion-icon name="remove-circle-sharp"></ion-icon></div>
             </div>
-            <div class="pencil_box"><ion-icon class = "pencil" onclick="pencil()" name="create"></ion-icon></div>
+            <div class="pencil_box" onclick="pencil()"><ion-icon class = "pencil" name="create"></ion-icon></div>
             <div class = "streak-name">
-                <h1>Big🦇Bat⚡</h1>
+                <h1 class="card-name">Big🦇Bat⚡</h1>
             </div>
         </div>
         <div class="add-container"><ion-icon name="add-outline"></ion-icon></div>
