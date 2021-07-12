@@ -111,6 +111,7 @@ function change(){
     card_content = document.getElementsByClassName("card-name")[0].innerHTML
     input_content = document.getElementsByClassName("input-text")[0].value
     document.getElementsByClassName("card-name")[0].innerHTML = input_content
+    localStorage.setItem('name',input_content)
     document.getElementsByClassName("overlay")[0].style = "display:none"
     document.getElementsByClassName("input-text")[0].value = ''
 }

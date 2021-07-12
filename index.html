@@ -61,6 +61,15 @@
             console.log(num_holder)
             localStorage.setItem('streak', num_holder);
             document.getElementsByClassName("num")[0].innerHTML = num_holder
+
+            card_content = document.getElementsByClassName("card-name")[0].innerHTML
+            console.log(card_content)
+            name = localStorage.getItem('name')
+            if(name == "undefined" || name == "null" || name == null)
+            {
+                localStorage.setItem('name',card_content)
+            }
+            document.getElementsByClassName("card-name")[0].innerHTML = localStorage.getItem('name')
         }
     </script>
 </body>
