@@ -96,6 +96,7 @@ function pencil(){
 }
 
 function emoji(){
+    console.log('Registering the click')
     window.dispatchEvent(new KeyboardEvent('keydown', {
         which: 90,
         keyCode: 90,
@@ -110,8 +111,28 @@ function emoji(){
 function change(){
     card_content = document.getElementsByClassName("card-name")[0].innerHTML
     input_content = document.getElementsByClassName("input-text")[0].value
+    console.log(input_content)
     document.getElementsByClassName("card-name")[0].innerHTML = input_content
     localStorage.setItem('name',input_content)
     document.getElementsByClassName("overlay")[0].style = "display:none"
-    document.getElementsByClassName("input-text")[0].value = ''
 }
+
+function inputKey(){
+    const log = document.getElementById('#message');
+    document.addEventListener('keypress', logKey);
+    function logKey(e)
+    {
+        if(e.key=="Enter")
+        {
+            card_content = document.getElementsByClassName("card-name")[0].innerHTML
+            input_content = document.getElementsByClassName("input-text")[0].value
+            console.log(input_content)
+            document.getElementsByClassName("card-name")[0].innerHTML = input_content
+            localStorage.setItem('name',input_content)
+            document.getElementsByClassName("overlay")[0].style = "display:none"
+        }
+
+    }
+}
+
+
