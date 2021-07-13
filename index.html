@@ -72,18 +72,32 @@
             document.getElementsByClassName("card-name")[0].innerHTML = localStorage.getItem('name')
 
             color = localStorage.getItem('color')
+            console.log("Color Loaded = "+color)
             if(color != null && color != "null" && color != null && color != '')
             {
                 if(color == "one")
                 {
+                    console.log("One was called")
                     color_picker("color_pallete_one")
                 }
                 if(color == "two")
                 {
+                    console.log("two was called")
                     color_picker("color_pallete_two")
                 }
                 if(color == "three")
                 {
+                    console.log("three was called")
+                    color_picker("color_pallete_three")
+                }
+                if(color == "four")
+                {
+                    console.log("four was called")
+                    color_picker("color_pallete_three")
+                }
+                if(color == "five")
+                {
+                    console.log("five was called")
                     color_picker("color_pallete_three")
                 }
             }
