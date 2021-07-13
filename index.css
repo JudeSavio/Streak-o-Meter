@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 45%;
     height: 10%;
     background-color: #f6f6f6;
     border-radius: 50px;
@@ -55,9 +55,9 @@
 
 .emoji{
     height: 60%;
-    width: 5%;
+    width: 8%;
     margin-left: 2%;
-    margin-right: 2%;
+    margin-right: 4%;
     cursor: pointer;
 }
 
@@ -70,7 +70,7 @@
     color: white;
     font-size: 100%;
     height:60%;
-    width: 20%;
+    width: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,6 +80,11 @@
 
 .add-button:active{
     transform: translateY(4px);
+}
+
+.paper-plane{
+    width: 30px;
+    height: 30px;
 }
 
 .banner{
