@@ -70,6 +70,23 @@
                 localStorage.setItem('name',card_content)
             }
             document.getElementsByClassName("card-name")[0].innerHTML = localStorage.getItem('name')
+
+            color = localStorage.getItem('color')
+            if(color != null && color != "null" && color != null && color != '')
+            {
+                if(color == "one")
+                {
+                    color_picker("color_pallete_one")
+                }
+                if(color == "two")
+                {
+                    color_picker("color_pallete_two")
+                }
+                if(color == "three")
+                {
+                    color_picker("color_pallete_three")
+                }
+            }
         }
     </script>
 </body>
