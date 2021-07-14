@@ -120,7 +120,7 @@
             year = d.getFullYear() 
             today = day.toString(10)+'-'+month.toString(10)+'-'+year.toString(10)
             date = localStorage.getItem("date")
-            if(date=="null" || date=="undefined" || date == null || date == '')
+            if(date === "null" || date === "undefined" || date === null || date === '')
             {
 
                 localStorage.setItem('date',today)
