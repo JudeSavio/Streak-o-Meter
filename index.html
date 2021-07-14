@@ -120,11 +120,13 @@
             year = d.getFullYear() 
             today = day.toString(10)+'-'+month.toString(10)+'-'+year.toString(10)
             date = localStorage.getItem("date")
+            console.log(date)
             if(date === "null" || date === "undefined" || date === null || date === '')
             {
+                console.log("set the date because it's the first time")
                 localStorage.setItem('date',today)
             }
-            console.log("today :"+today+"Date :"+date)
+            console.log("today :"+today+" Date :"+date)
             if( set == '1' && date!=today)
             {
                 localStorage.setItem('set','0')
