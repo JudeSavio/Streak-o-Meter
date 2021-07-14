@@ -9,7 +9,7 @@ function plus(){
     today = day.toString(10)+'-'+month.toString(10)+'-'+year.toString(10)
     date = localStorage.getItem("date")
     set = localStorage.getItem('set')
-    if(set == '0' && date!=today)
+    if( (set == '0' && date!=today) || set=="0" && date == today)
     {
         if(number >= 1)
         {
