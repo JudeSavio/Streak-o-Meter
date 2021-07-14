@@ -2,59 +2,93 @@ function plus(){
     number = document.getElementsByClassName("num")[0].innerHTML;
     number = parseInt(number) + 1;
     number = Number(number)
-    if(number >= 1)
+    const d = new Date();
+    day = d.getDate()
+    month = d.getMonth() + 1
+    year = d.getFullYear() 
+    today = day.toString(10)+'-'+month.toString(10)+'-'+year.toString(10)
+    date = localStorage.getItem("date")
+    set = localStorage.getItem('set')
+    if(set == '0' && date!=today)
     {
-        document.getElementsByClassName("minus")[0].classList.remove("shake-horizontal")
+        if(number >= 1)
+        {
+            document.getElementsByClassName("minus")[0].classList.remove("shake-horizontal")
+        }
+        if(number >= 100 && number<=999){
+            document.getElementsByClassName("num")[0].innerHTML = number
+            localStorage.setItem('streak',number);
+            document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+            localStorage.setItem('set',1)
+            localStorage.setItem('date',today)
+        }
+        else if (number>=1000 && number<=9999){
+            document.getElementsByClassName("num")[0].innerHTML = number
+            localStorage.setItem('streak',number);
+            document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+            localStorage.setItem('set',1)
+            localStorage.setItem('date',today)
+        }
+        else if(number >= 10000 && number <= 99999){
+            document.getElementsByClassName("num")[0].innerHTML = number
+            localStorage.setItem('streak',number);
+            document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+            localStorage.setItem('set',1)
+            localStorage.setItem('date',today)
+        }
+        else{
+            document.getElementsByClassName("num")[0].innerHTML = number
+            localStorage.setItem('streak',number);
+            document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+            localStorage.setItem('set',1)
+            localStorage.setItem('date',today)
+        }
     }
-    if(number >= 100 && number<=999){
-        document.getElementsByClassName("num")[0].innerHTML = number
-        localStorage.setItem('streak',number);
-        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+    else if(set=='1' && date == today)
+    {
+        document.getElementsByClassName("plus")[0].classList.add("shake-horizontal")
     }
-    else if (number>=1000 && number<=9999){
-        document.getElementsByClassName("num")[0].innerHTML = number
-        localStorage.setItem('streak',number);
-        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
-    }
-    else if(number >= 10000 && number <= 99999){
-        document.getElementsByClassName("num")[0].innerHTML = number
-        localStorage.setItem('streak',number);
-        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
-    }
-    else{
-        document.getElementsByClassName("num")[0].innerHTML = number
-        localStorage.setItem('streak',number);
-        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
-    }
-    
 }
 
 function minus(){
     number = document.getElementsByClassName("num")[0].innerHTML
     number = parseInt(number) - 1;
     number = Number(number)
-    if(number < 0){
-        document.getElementsByClassName("num")[0].innerHTML = 0
-        localStorage.setItem('streak',number);
+    const d = new Date();
+    day = d.getDate()
+    month = d.getMonth() + 1
+    year = d.getFullYear() 
+    today = day.toString(10)+'-'+month.toString(10)+'-'+year.toString(10)
+    date = localStorage.getItem("date")
+    set = localStorage.getItem('set')
+    if(set =='0' && date!=today)
+    {
+        if(number < 0){
+            document.getElementsByClassName("num")[0].innerHTML = 0
+            localStorage.setItem('streak',number);
+            document.getElementsByClassName("minus")[0].classList.add("shake-horizontal")
+            document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+        }
+        else if(number >= 100 && number<=999){
+            document.getElementsByClassName("num")[0].innerHTML = number
+            localStorage.setItem('streak',number);
+            document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+        }
+        else if(number >= 1000 && number<=9999){
+            document.getElementsByClassName("num")[0].innerHTML = number
+            localStorage.setItem('streak',number);
+            document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+        }
+        else{
+            document.getElementsByClassName("num")[0].innerHTML = number
+            localStorage.setItem('streak',number);
+            document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+        }
+    }
+    else if(set=='1' && date==today)
+    {
         document.getElementsByClassName("minus")[0].classList.add("shake-horizontal")
-        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
-    }
-    else if(number >= 100 && number<=999){
-        document.getElementsByClassName("num")[0].innerHTML = number
-        localStorage.setItem('streak',number);
-        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
-    }
-    else if(number >= 1000 && number<=9999){
-        document.getElementsByClassName("num")[0].innerHTML = number
-        localStorage.setItem('streak',number);
-        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
-    }
-    else{
-        document.getElementsByClassName("num")[0].innerHTML = number
-        localStorage.setItem('streak',number);
-        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
-    }
-    
+    }    
 }
 
 function color_picker(className){
