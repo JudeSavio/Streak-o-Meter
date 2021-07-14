@@ -13,7 +13,7 @@ function plus(){
     {
         if(number >= 1)
         {
-            document.getElementsByClassName("minus")[0].classList.remove("shake-horizontal")
+            document.getElementsByClassName("minus")[0].classList.remove("shake-crazy")
         }
         if(number >= 100 && number<=999){
             document.getElementsByClassName("num")[0].innerHTML = number
@@ -46,7 +46,7 @@ function plus(){
     }
     else if(set=='1' && date == today)
     {
-        document.getElementsByClassName("plus")[0].classList.add("shake-horizontal")
+        document.getElementsByClassName("plus")[0].classList.add("shake-crazy")
     }
 }
 
@@ -66,7 +66,7 @@ function minus(){
         if(number < 0){
             document.getElementsByClassName("num")[0].innerHTML = 0
             localStorage.setItem('streak',number);
-            document.getElementsByClassName("minus")[0].classList.add("shake-horizontal")
+            document.getElementsByClassName("minus")[0].classList.add("shake-crazy")
             document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
         }
         else if(number >= 100 && number<=999){
@@ -87,7 +87,7 @@ function minus(){
     }
     else if(set=='1' && date==today)
     {
-        document.getElementsByClassName("minus")[0].classList.add("shake-horizontal")
+        document.getElementsByClassName("minus")[0].classList.add("shake-crazy")
     }    
 }
 
