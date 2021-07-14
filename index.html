@@ -108,8 +108,35 @@
                     color_picker("color_pallete_three")
                 }
             }
-            console.log(document.getElementsByClassName("lock")[0].attributes.name)
-            console.log(document.getElementsByClassName("lock")[0].attributes.name)
+            set = localStorage.getItem('set')
+            if(set == "null" || set == "undefined" || set == null || set=='')
+            {
+                localStorage.setItem('set',0)
+            }
+            today = ''
+            const d = new Date();
+            day = d.getDate()
+            month = d.getMonth() + 1
+            year = d.getFullYear() 
+            today = day.toString(10)+'-'+month.toString(10)+'-'+year.toString(10)
+            date = localStorage.getItem("date")
+            if(date=="null" || date=="undefined" || date == null || date == '')
+            {
+
+                localStorage.setItem('date',today)
+            }
+            console.log("today :"+today+"Date :"+date)
+            if( set == '1' && date!=today)
+            {
+                localStorage.setItem('set','0')
+                document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-open');
+                document.getElementsByClassName("minus")[0].classList.remove("shake-horizontal")
+                document.getElementsByClassName("plus")[0].classList.remove("shake-horizontal")
+            }
+            else if( set == '1' && date==today)
+            {
+                document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
+            }
         }
     </script>
 </body>
