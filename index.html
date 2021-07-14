@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css" integrity="sha512-RliK2gk03WxUELn57ddjWLhEfhUiOZ85VvWLImFy8A7FOPMkF4Z9YGQ3VKX5jpwkEerAL6I0nC+JNeCPrxWBTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="index.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
@@ -41,7 +42,10 @@
                 <div class ="plus" onclick="plus()"><ion-icon name="add-circle-sharp"></ion-icon></div>
                 <div class = "minus" onclick="minus()"><ion-icon name="remove-circle-sharp"></ion-icon></div>
             </div>
-            <div class="pencil_box" onclick="pencil()"><ion-icon class = "pencil" name="create"></ion-icon></div>
+            <div class="icon-box">
+                <div class="lock_box"><ion-icon class="lock" name="lock-open"></ion-icon></div>
+                <div class="pencil_box" onclick="pencil()"><ion-icon class = "pencil" name="create"></ion-icon></div>
+            </div>
             <div class = "streak-name">
                 <h1 class="card-name">Big🦇Bat⚡</h1>
             </div>
@@ -104,6 +108,8 @@
                     color_picker("color_pallete_three")
                 }
             }
+            console.log(document.getElementsByClassName("lock")[0].attributes.name)
+            console.log(document.getElementsByClassName("lock")[0].attributes.name)
         }
     </script>
 </body>
