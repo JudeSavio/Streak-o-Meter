@@ -2,21 +2,29 @@ function plus(){
     number = document.getElementsByClassName("num")[0].innerHTML;
     number = parseInt(number) + 1;
     number = Number(number)
+    if(number >= 1)
+    {
+        document.getElementsByClassName("minus")[0].classList.remove("shake-horizontal")
+    }
     if(number >= 100 && number<=999){
         document.getElementsByClassName("num")[0].innerHTML = number
         localStorage.setItem('streak',number);
+        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
     }
     else if (number>=1000 && number<=9999){
         document.getElementsByClassName("num")[0].innerHTML = number
         localStorage.setItem('streak',number);
+        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
     }
     else if(number >= 10000 && number <= 99999){
         document.getElementsByClassName("num")[0].innerHTML = number
         localStorage.setItem('streak',number);
+        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
     }
     else{
         document.getElementsByClassName("num")[0].innerHTML = number
         localStorage.setItem('streak',number);
+        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
     }
     
 }
@@ -28,18 +36,23 @@ function minus(){
     if(number < 0){
         document.getElementsByClassName("num")[0].innerHTML = 0
         localStorage.setItem('streak',number);
+        document.getElementsByClassName("minus")[0].classList.add("shake-horizontal")
+        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
     }
     else if(number >= 100 && number<=999){
         document.getElementsByClassName("num")[0].innerHTML = number
         localStorage.setItem('streak',number);
+        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
     }
     else if(number >= 1000 && number<=9999){
         document.getElementsByClassName("num")[0].innerHTML = number
         localStorage.setItem('streak',number);
+        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
     }
     else{
         document.getElementsByClassName("num")[0].innerHTML = number
         localStorage.setItem('streak',number);
+        document.getElementsByClassName("lock")[0].setAttribute('name', 'lock-closed');
     }
     
 }
@@ -101,16 +114,7 @@ function pencil(){
 }
 
 function emoji(){
-    console.log('Registering the click')
-    window.dispatchEvent(new KeyboardEvent('keydown', {
-        which: 90,
-        keyCode: 90,
-        shiftKey: false,
-        altKey: false,
-        ctrlKey: true,
-        metaKey: false,
-        key: "win"
-      }));
+    console.log('Emoji Icon Pressed')
 }
 
 function change(){
